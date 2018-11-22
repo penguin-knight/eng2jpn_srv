@@ -17,7 +17,7 @@ pip3 install googletrans
 ```
 
 ## 動作確認済み環境
-Cygwin  
+Cygwin  (Windows 10)
 
 ## セットアップ
 1. python3 eng2jpn_srv.py

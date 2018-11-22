@@ -29,12 +29,14 @@ def index():
 
 @post('/')
 def translate():
-    _input = request.forms.get('eng_txt',None)
+    #_input = request.forms.get('eng_txt',None)
+    _input = request.forms.eng_txt
     _input = urllib.parse.quote(_input,encoding="utf-8")
     _input = re.sub('%0D%0A', ' ', _input)
     _input = urllib.parse.unquote_plus(_input,encoding="utf-8")
     output = trans.translate(_input,dest='ja')
     output = re.sub('。','．\n',output.text)
+    output = re.sub('、','，',output)
     return template("index", eng_txt=_input, jpn_txt=output)
 
 if __name__=='__main__':
