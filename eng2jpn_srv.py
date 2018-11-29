@@ -33,6 +33,7 @@ def translate():
     _input = request.forms.eng_txt
     _input = urllib.parse.quote(_input,encoding="utf-8")
     _input = re.sub('%0D%0A', ' ', _input)
+    _input = re.sub('- ', '', _input)
     _input = urllib.parse.unquote_plus(_input,encoding="utf-8")
     output = trans.translate(_input,dest='ja')
     output = re.sub('。','．\n',output.text)
