@@ -32,6 +32,9 @@
 <button class="button-success pure-button" type="submit">translate!</button>
 <button class="button-error pure-button" type="button" onClick="reset_form()">clear</button>
 </p>
+
+<a class="button-warning pure-button" href="/format_eng">format text</a>
+
 </form>
 <script type="text/javascript" src="/static/js/main.js"></script>
   </body>
